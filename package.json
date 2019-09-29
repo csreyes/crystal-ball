@@ -8,6 +8,10 @@
     "node": ">=8",
     "yarn": "*"
   },
+  "apidoc": {
+    "name": "crystal-ball",
+    "version": "0.1.0"
+  },
   "scripts": {
     "precommit": "yarn lint",
     "prestart": "yarn docs",
@@ -26,7 +30,7 @@
     "postpublish": "git push --tags",
     "deploy": "sh ./deploy.sh",
     "docs": "apidoc -i src -o docs",
-    "postdocs": "opn docs/index.html",
+    "postdocs": "open docs/index.html",
     "docker:start": "cross-env NODE_ENV=production pm2-docker start ./src/index.js",
     "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
     "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
@@ -39,7 +43,6 @@
     "body-parser": "^1.17.0",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
-    "cross-env": "^5.0.1",
     "dotenv-safe": "^6.0.0",
     "express": "^4.15.2",
     "express-rate-limit": "^3.0.0",
@@ -56,6 +59,7 @@
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
     "passport-jwt": "4.0.0",
+    "pm2": "^3.5.1",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
@@ -63,6 +67,7 @@
     "chai": "^4.1.0",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.0.0",
+    "cross-env": "^5.2.1",
     "eslint": "^4.2.0",
     "eslint-config-airbnb-base": "^12.0.1",
     "eslint-plugin-import": "^2.2.0",
