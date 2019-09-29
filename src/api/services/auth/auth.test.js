@@ -309,7 +309,7 @@ describe('Authentication API', () => {
           expect(field1).to.be.equal('email');
           expect(location1).to.be.equal('body');
           expect(messages1).to.include('"email" is required');
-          expect(field2).to.be.equal('refreshToken');
+          expect(field2).to.be.equal('trolling');
           expect(location2).to.be.equal('body');
           expect(messages2).to.include('"refreshToken" is required');
         });
