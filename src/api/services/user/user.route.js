@@ -183,11 +183,11 @@ router
    *
    * @apiSuccess (No Content 204)  Successfully deleted
    *
-   * @apiError (Unauthorized 401) Unauthorized  Only authenticated users can delete the data
+   * @apiError (Unauthorized 401) Unauthorized  Only Admin users can delete the data
    * @apiError (Forbidden 403)    Forbidden     Only user with same id or admins can delete the data
    * @apiError (Not Found 404)    NotFound      User does not exist
    */
-  .delete(authorize(LOGGED_USER), controller.remove);
+  .delete(authorize(ADMIN), controller.remove);
 
 
 module.exports = router;
