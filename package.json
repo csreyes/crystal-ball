@@ -37,6 +37,8 @@
     "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up --abort-on-container-exit"
   },
   "dependencies": {
+    "@slack/events-api": "^2.3.0",
+    "@slack/web-api": "^5.2.0",
     "axios": "^0.18.0",
     "bcryptjs": "2.4.3",
     "bluebird": "^3.5.0",
